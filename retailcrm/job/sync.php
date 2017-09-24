@@ -366,6 +366,8 @@ if ($history->isSuccessful() && count($history->history) > 0) {
                 $api->ordersFixExternalIds($orderFix);
             }
         } else {
+            
+            $order = $order_history;
             $orderToUpdate = new Order((int) $order['externalId']);
 
             /*
